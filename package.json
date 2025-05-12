@@ -1,0 +1,20 @@
+{
+  "name": "oxxpo",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "postinstall": "dotnet tool restore && dotnet restore",
+    "dev": "dotnet fable watch ./fsharp/Oxxpo.fsproj -s -e .fs.jsx -o ./src --run vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^6.3.5",
+    "vite-plugin-solid": "^2.11.6"
+  },
+  "dependencies": {
+    "@solidjs/router": "^0.15.3",
+    "solid-js": "^1.9.6"
+  }
+}
